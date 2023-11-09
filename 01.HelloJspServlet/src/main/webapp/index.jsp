@@ -26,8 +26,6 @@
 			</td>
 		</tr>
 	</table>
-
-
 	<tr>
 		<td>POST 방식</td>
 		<td>
@@ -37,7 +35,5 @@
 			</form>
 		</td>
 	</tr>
-
-
 </body>
 </html>
