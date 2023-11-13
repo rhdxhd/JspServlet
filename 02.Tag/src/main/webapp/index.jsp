@@ -366,7 +366,7 @@
                                         <div class="col-lg-8">
                                         <a href="01.script/Ex03TestForIf.jsp">1. 합구하기</a>
                                         <p></p>
-                                        <a href="01.script/Ex04Forfor.jsp">2. 중첩 Forfor</a>
+                                        <a href="01.script/Ex04ForFor.jsp">2. 중첩 ForFor</a>
                                         </div>
                                     </div>
                                 </div>
