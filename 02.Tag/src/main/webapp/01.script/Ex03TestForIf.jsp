@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-	  int evenSum = 0,  int oddSum = 0;
+	  int oddSum = 0,  evenSum = 0;
 	  for(int i = 1; i <=100; i++) {
     	 if (i%2 == 1) {
 			oddSum += i;
@@ -20,7 +20,7 @@
     
     <p style="color: red;"><%=oddSum %></p>
     <p style="color: #009;"><%=evenSum %></p>
-    <p><%=oddSum + evenSum %></p>
+    <p><%= oddSum + evenSum %></p>
 	
 </body>
 </html>

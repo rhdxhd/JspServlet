@@ -18,7 +18,6 @@
          HTML내부 태그에 해당하는 모든 내용을 출력하기.
      -->
 
-
 	<% int vInt = 10;
 	   String vStr= "테스트 중입니다"; 
 	   double vDouble = 3.14; 
@@ -31,9 +30,7 @@
 	 <p style="font-size: 24px; color: #009900">vInt: <%=vInt %></p>
 	 <p style="font-size: 24px; color: #009900">vStr: <%=vStr %></p>
 	 <p style="font-size: 24px; color: #009900">vDouble: <%=vDouble %></p>
-	 <p style="font-size: 24px; color: #009900">sList: <%=sList.get(0) + sList.get(1) + sList.get(2) %></p>
-	
-	
+	 <p style="font-size: 24px; color: #009900">sList: <%=sList.get(0) + sList.get(1) + sList.get(2) %></p>	
 
 </body>
 </html>
