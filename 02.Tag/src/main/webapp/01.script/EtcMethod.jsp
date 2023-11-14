@@ -35,7 +35,6 @@
 		getDiv(나누기)
 	 -->
 	 <a>getSum: <%= getSum(10, 20) %> </a>
-	
-	
+		
 </body>
 </html>

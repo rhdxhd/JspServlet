@@ -13,6 +13,7 @@
 	<h1>에러 페이지 메인</h1>
 	<!-- 자바코드로 실행 후 오류가 나게 해보기. -->
 	
+	
 	<% /* String str = null;
 		int length = str.length(); 
 		

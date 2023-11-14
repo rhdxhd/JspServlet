@@ -401,7 +401,7 @@
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
-                                        <a href="02.Directive/Ex01_Driective.jsp">1. 디렉티브 기본</a>
+                                        <a href="02.Directive/Ex01_Directive.jsp">1. 디렉티브 기본</a>
                                         <p></p>
                                         <a href="02.Directive/Ex02_Error2Main.jsp">2. 오류페이지 처리</a>
                                         </div>

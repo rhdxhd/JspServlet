@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="/include/header.jsp" %>
 	<p>Ex04Main</p>
 	<p>메인 컨텐츠(444444444게시판)</p>
 	
@@ -16,7 +16,7 @@
 		
 		Ex04_Main의 p태그 내용 수정 후 같은 헤더와 푸터를 붙이기
 		 -->
-	<%@ include file="footer.jsp" %>
+	<%@ include file="/include/footer.jsp" %>
 	
 	
 </body>

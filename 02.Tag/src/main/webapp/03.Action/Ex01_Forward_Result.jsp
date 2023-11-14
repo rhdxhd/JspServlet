@@ -8,9 +8,9 @@
 </head>
 <body>
 
-	<%@ include file="/include/header.jsp" %>
+
 	<h1> 포워드를 통해서 이동 된 페이지</h1>
 
-	<%@ include file="/include/footer.jsp" %>
+	
 </body>
 </html>
