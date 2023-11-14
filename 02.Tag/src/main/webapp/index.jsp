@@ -377,11 +377,18 @@
                                 </div>
                             </div>
                         </section>
-                        <!-- Education Section-->
+                   
                         
-                        <section>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         <!-- Directive Section -->
                         <!-- p<-패딩, m<-마진 1~5단계(0은 있지만 안씀) -->
+                        <section>
                             <h2 class="text-secondary fw-bolder mb-4">Directive Tag</h2>
                             <!-- Directive Card 1-->
                             <div class="card shadow border-0 rounded-4 mb-5">
@@ -407,7 +414,7 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">디렉티드 인클루드 </div>
+                                                <div class="text-secondary fw-bolder mb-2">디렉티브 인클루드 </div>
                                                                                   
                                             </div>
                                         </div>
@@ -421,6 +428,78 @@
                             </div>
            
                         </section>
+
+
+						<!-- Action section -->
+                        <section>
+                            <h2 class="text-success fw-bolder mb-4">Directive Tag</h2>
+                            <!-- Action Card 1-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-3">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-success fw-bolder mb-2">액션 포워드(Forward)</div>
+                                                                                  
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <a href="03.Action/Ex01_Forward.jsp" class="d-block mb-1">1. 포워드</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+  						<!-- Action Card 2-->
+                            <h2 class="text-success fw-bolder mb-4">Directive Tag</h2>
+                            <!-- Action Card 1-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-3">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-success fw-bolder mb-2">액션 포워드(Forward)</div>
+                                                                                  
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <a href="03.Action/Ex01_Forward.jsp" class="d-block mb-1">1. 포워드</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                          <!-- Action Card 3-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-3">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-success fw-bolder mb-2">Bean객체(JSP)</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        JSP(Spring) Bean객체 핵심이 되는 내용이지만 현재는 JSP 코드로 사용하는 것은 매우 불편함.
+                                        스프링 기능없이 만드는거 자체가 매우 불편함.
+                                        객체를 항상 new로 초기화 x -> Spring 속성을 이용해서 자동으로 설정을 로딩해서 객체로 만드는 용도로 많이씀.
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                       
+                        </section>
+
+
+
+
+
+
+
 
 		<!-- About Section-->
 		<section class="bg-light py-5">
