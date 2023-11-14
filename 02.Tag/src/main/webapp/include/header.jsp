@@ -22,7 +22,7 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
 	rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/styles.css" rel="stylesheet" />
+<link href="../css/styles.css" rel="stylesheet" />
 </head>
 <body class="d-flex flex-column h-100">
 	<main class="flex-shrink-0">
@@ -81,7 +81,7 @@
 							<div class="profile bg-gradient-primary-to-secondary">
 								<!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
 								<!-- Watch a tutorial on how to do this on YouTube (link)-->
-								<img class="profile-img" src="assets/apple.png" alt="..." />
+								<img class="profile-img" src="../assets/apple.png" alt="..." />
 								<div class="dots-1">
 									<!-- SVG Dots-->
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -301,173 +301,6 @@
 			</div>
 		</header>
 		
-		
-		<div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">스크립트태그(Script Tag)</span></h1>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <!-- Experience Section-->
-                        <section>
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-                                <!-- Download resume button-->
-                                <!-- Note: Set the link href target to a PDF file within your project-->
-                                <a class="btn btn-primary px-4 py-3" href="#!">
-                                    <div class="d-inline-block bi bi-download me-2"></div>
-                                    Download Resume
-                                </a>
-                            </div>
-                            <!-- Experience Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
-                                <div class="card-body p-3">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">1. 태그 처음 사용</div>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                        	<a href="01.script/Ex00into.jsp">태그와 변수이용</a>
-                                        	<p></p>
-                                        	<a href="01.script/Ex01Var.jsp">여러 변수 선언 , 할당 ,출력</a>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Experience Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-4">
-                                <div class="card-body p-3">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">2. 제어문</div>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                        <a href="01.script/Ex02For.jsp">1. For문</a>
-                                        <p></p>
-                                        <a href="01.script/Ex02If.jsp">2. If문</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Experience Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-3">
-                                   <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">3. 실습</div>
-                                             </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                        <a href="01.script/Ex03TestForIf.jsp">1. 합구하기</a>
-                                        <p></p>
-                                        <a href="01.script/Ex04ForFor.jsp">2. 중첩 ForFor</a>
-                                        <p></p>
-                                        <a href="01.script/EtcMethod.jsp">3. 메소드</a>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Education Section-->
-                        
-                        <section>
-                        <!-- Directive Section -->
-                        <!-- p<-패딩, m<-마진 1~5단계(0은 있지만 안씀) -->
-                            <h2 class="text-secondary fw-bolder mb-4">Directive Tag</h2>
-                            <!-- Directive Card 1-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-3">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">디렉티브 태그 페이지</div>
-                                                                                  
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                        <a href="02.Directive/Ex01_Driective.jsp">1. 디렉티브 기본</a>
-                                        <p></p>
-                                        <a href="02.Directive/Ex02_Error2Main.jsp">2. 오류페이지 처리</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Directive Card 2-->
-                            <div class="card shadow border-0 rounded-4 mb-5">
-                                <div class="card-body p-3">
-                                    <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-4 rounded-4">
-                                                <div class="text-secondary fw-bolder mb-2">디렉티드 인클루드 </div>
-                                                                                  
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-8">
-                                        <a href="02.Directive/Ex03_Main.jsp">1. 붙이기 header footer</a>
-                                        <p></p>
-                                        <a href="02.Directive/Ex04_Main.jsp">2. 붙이기 header footer</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-           
-                        </section>
-
-		<!-- About Section-->
-		<section class="bg-light py-5">
-			<div class="container px-5">
-				<div class="row gx-5 justify-content-center">
-					<div class="col-xxl-8">
-						<div class="text-center my-5">
-							<h2 class="display-5 fw-bolder">
-								<span class="text-gradient d-inline">About Me</span>
-							</h2>
-							<p class="lead fw-light mb-4">My name is Start Bootstrap and
-								I help brands grow.</p>
-							<p class="text-muted">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Fugit dolorum itaque qui unde quisquam
-								consequatur autem. Eveniet quasi nobis aliquid cumque officiis
-								sed rem iure ipsa! Praesentium ratione atque dolorem?</p>
-							<div class="d-flex justify-content-center fs-2 gap-4">
-								<a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
-								<a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>
-								<a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
-	<!-- Footer-->
-	<footer class="bg-white py-4 mt-auto">
-		<div class="container px-5">
-			<div
-				class="row align-items-center justify-content-between flex-column flex-sm-row">
-				<div class="col-auto">
-					<div class="small m-0">Copyright &copy; Your Website 2023</div>
-				</div>
-				<div class="col-auto">
-					<a class="small" href="#!">Privacy</a> <span class="mx-1">&middot;</span>
-					<a class="small" href="#!">Terms</a> <span class="mx-1">&middot;</span>
-					<a class="small" href="#!">Contact</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Bootstrap core JS-->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- Core theme JS-->
-	<script src="js/scripts.js"></script>
-</body>
-</html>
+		</main>
+		</body>
+		</html>
