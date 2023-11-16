@@ -325,15 +325,12 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
-                                                <div class="text-primary fw-bolder mb-2">페이지 요청 해보기</div>
-                                                
+                                                <div class="text-primary fw-bolder mb-2">페이지 요청 해보기</div>  
                                             </div>
                                         </div>
                                         <div class="col-lg-8">
                                         	<a href="ex01_req">Controller에 요청(Servlet)</a>
-                                      
-                                        </div>
-                                        
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
