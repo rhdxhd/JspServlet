@@ -55,9 +55,12 @@ public class UserTblController extends HttpServlet {
 			// RequestDispatcher를 이용해서, usertbl/list.jsp에 내용을 출력해보기.
 			
 		} else if (req.getServletPath().equals("/update")) {
-		
-			System.out.println(req.getParameter("username"));
-			System.out.println(req.getParameter("address"));
+			UserTblDTO dto = new UserTblDTO();
+			dto.setUsername(req.getParameter("username"));
+			dto.setBirthyear(Integer.parseInt(req.getParameter("birthyear")));
+			dto.setMobile(req.getParameter("mobile"));
+			dto.setAddress(req.getParameter("address"));
+			//dao에 update메소드 만들어보기.
 			
 			
 		}
