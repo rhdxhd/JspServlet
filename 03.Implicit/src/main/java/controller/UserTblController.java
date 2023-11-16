@@ -23,48 +23,81 @@ public class UserTblController extends HttpServlet {
 
 	RequestDispatcher rd;
 
-	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
-		
-		
-		UserTblDAO dao = new UserTblDAO();
-		if (req.getServletPath().equals("/list")) {
-
-			// dao.openConnection();
-
-			ArrayList<UserTblDTO> list = dao.selectList();
-			// System.out.println(req.getServletPath());
-			// System.out.println(req.getRequestURI());
-
-			req.setAttribute("list", list); // ${list}
-
-			rd = req.getRequestDispatcher("usertbl/list.jsp");
-			// rd.forward(req, resp);
-		} else if (req.getServletPath().equals("/detail")) {
-			String name = req.getParameter("name");
-			UserTblDTO dto = dao.selectOne(name);
-			req.setAttribute("dto", dto);
-			rd = req.getRequestDispatcher("usertbl/detail.jsp");
-			// System.out.println(dto.getUsername() + dto.getAddress());
-
-			// System.out.println(req.getParameter("name"));
-
-			// System.out.println(dao.selectList().size());
-
-			// RequestDispatcher를 이용해서, usertbl/list.jsp에 내용을 출력해보기.
+		@Override
+		protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			req.setCharacterEncoding("UTF-8");
 			
-		} else if (req.getServletPath().equals("/update")) {
-			UserTblDTO dto = new UserTblDTO();
-			dto.setUsername(req.getParameter("username"));
-			dto.setBirthyear(Integer.parseInt(req.getParameter("birthyear")));
-			dto.setMobile(req.getParameter("mobile"));
-			dto.setAddress(req.getParameter("address"));
-			//dao에 update메소드 만들어보기.
+			UserTblDAO dao = new UserTblDAO();
+			if(req.getServletPath().equals("/list")) {
+				ArrayList<UserTblDTO> list = dao.selectList();
+				req.setAttribute("list", list);
+				rd = req.getRequestDispatcher("usertbl/list.jsp");
+			}else if(req.getServletPath().equals("/detail")) {
+				String name = req.getParameter("name");
+				UserTblDTO dto = dao.selectOne(name);
+				req.setAttribute("dto", dto);
+				rd = req.getRequestDispatcher("usertbl/detail.jsp");
+			}else if(req.getServletPath().equals("/update")) {
+				UserTblDTO dto = new UserTblDTO();
+				dto.setUsername(req.getParameter("username"));
+				dto.setBirthyear(Integer.parseInt( req.getParameter("birthyear") ));
+				dto.setMobile(req.getParameter("mobile"));
+				dto.setAddress(req.getParameter("address"));
+				//dao에 update메소드 만들어보기.
+			}
 			
-			
+			rd.forward(req, resp);			
 		}
-		rd.forward(req, resp);
 	}
-
-}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		req.setCharacterEncoding("UTF-8");
+//		
+//		
+//		UserTblDAO dao = new UserTblDAO();
+//		if (req.getServletPath().equals("/list")) {
+//
+//			// dao.openConnection();
+//
+//			ArrayList<UserTblDTO> list = dao.selectList();
+//			// System.out.println(req.getServletPath());
+//			// System.out.println(req.getRequestURI());
+//
+//			req.setAttribute("list", list); // ${list}
+//
+//			rd = req.getRequestDispatcher("usertbl/list.jsp");
+//			// rd.forward(req, resp);
+//		} else if (req.getServletPath().equals("/detail")) {
+//			String name = req.getParameter("name");
+//			UserTblDTO dto = dao.selectOne(name);
+//			req.setAttribute("dto", dto);
+//			rd = req.getRequestDispatcher("usertbl/detail.jsp");
+//			// System.out.println(dto.getUsername() + dto.getAddress());
+//
+//			// System.out.println(req.getParameter("name"));
+//
+//			// System.out.println(dao.selectList().size());
+//
+//			// RequestDispatcher를 이용해서, usertbl/list.jsp에 내용을 출력해보기.
+//			
+//		} else if (req.getServletPath().equals("/update")) {
+//			UserTblDTO dto = new UserTblDTO();
+//			dto.setUsername(req.getParameter("username"));
+//			dto.setBirthyear(Integer.parseInt(req.getParameter("birthyear")));
+//			dto.setMobile(req.getParameter("mobile"));
+//			dto.setAddress(req.getParameter("address"));
+//			//dao에 update메소드 만들어보기.
+//			
+//			
+//		}
+//		rd.forward(req, resp);
+//	}
+//
+//}
