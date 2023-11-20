@@ -62,21 +62,85 @@ public class UserTblDAO {
 		UserTblDTO dto = new UserTblDTO();
 		if (!isConnection())
 			return dto;
-		
-			try {
-				ps = conn.prepareStatement(" SELECT * FROM USERTBL WHERE USER_NAME=? ");
-				ps.setString(1, name);
-				rs = ps.executeQuery();
-				while (rs.next()) {
-					dto.setUsername(rs.getString("USER_NAME"));
-					dto.setAddress(rs.getString("ADDRESS"));
-					dto.setBirthyear(rs.getInt("BIRTHYEAR"));
-					dto.setMobile(rs.getString("MOBILE"));
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
+
+		try {
+			ps = conn.prepareStatement(" SELECT * FROM USERTBL WHERE USER_NAME=? ");
+			ps.setString(1, name);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				dto.setUsername(rs.getString("USER_NAME"));
+				dto.setAddress(rs.getString("ADDRESS"));
+				dto.setBirthyear(rs.getInt("BIRTHYEAR"));
+				dto.setMobile(rs.getString("MOBILE"));
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return dto;
+	}
+
+	// 데이터 1건 업데이트
+	// 1.Conn 통신 열기 -> isConnection();
+	// 2.Statement 통신을 통해 전송 -> conn객체, sql문
+	// 3.Select의 경우 결과를 받기 -> ResultSet
+	public void update(UserTblDTO dto) {
+		if (isConnection() == false)
+			return; // ← 통신이 됐으면,
+		try {
+			// String sql= "";
+			// sql문이 필요함 ↓
+			ps = conn.prepareStatement(
+					"UPDATE USERTBL " + "SET BIRTHYEAR = ?, ADDRESS = ?, MOBILE = ? " + "WHERE USER_NAME = ?");
+			ps.setInt(1, dto.getBirthyear());
+			ps.setString(2, dto.getAddress());
+			ps.setString(3, dto.getMobile());
+			ps.setString(4, dto.getUsername());
+
+			int result = ps.executeUpdate();
+			System.out.println(result);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// delete(삭제)
+	public void delete(String username) {
+		if (isConnection() == false)
+			return; // ← 통신이 됐으면,
+		try {
+			// String sql= "";
+			// sql문이 필요함 ↓
+			ps = conn.prepareStatement("DELETE FROM USERTBL WHERE USER_NAME=?");
+			ps.setString(1, username);
+
+			int result = ps.executeUpdate();
+			System.out.println(result);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// insert
+	public void insert(UserTblDTO dto) {
+		if (isConnection() == false)
+			return;
+		try {
+			ps = conn.prepareStatement(
+					"INSERT INTO USERTBL (USER_NAME, BIRTHYEAR, ADDRESS, MOBILE) VALUES(?, ? , ?, ?)");
+			ps.setString(1, dto.getUsername());
+			ps.setInt(2, dto.getBirthyear());
+			ps.setString(3, dto.getAddress());
+			ps.setString(4, dto.getMobile());
+
+			int result = ps.executeUpdate();
+			System.out.println(result);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 }
