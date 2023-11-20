@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<p>${param1 }</p>
+	<p>${param2 }</p>
 </body>
 </html>

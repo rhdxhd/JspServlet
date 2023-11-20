@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<h1>kymList</h1>
 	<a href="insert.kym?param1=1&param2=2">요청</a>
-
 </body>
 </html>
