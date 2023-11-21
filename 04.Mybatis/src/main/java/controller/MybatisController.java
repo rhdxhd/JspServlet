@@ -74,7 +74,7 @@ public class MybatisController extends HttpServlet {
 			// sql.commit();
 			System.out.println(result);
 		}else if(path.equals("/update.my")) {
-			int result = sql.insert("testmapper.update");
+			int result = sql.update("testmapper.update");
 			System.out.println(result);	
 		}else if(path.equals("/delete.my")) {
 			//delete기능 만들어보기. -> COL1의 값이 cons인 행들은 전부 삭제
