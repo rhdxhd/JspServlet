@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class MybatisTblDAO {
 	//싱글톤 ( static 블럭킹을 이용해서 전역적인 초기화 식 사용 )
 	
-	private static String sql;
+	private static SqlSession sql;
 	
 	static {
 		System.out.println("싱글톤?");
@@ -27,7 +27,6 @@ public class MybatisTblDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 	
 	
@@ -40,11 +39,9 @@ public class MybatisTblDAO {
 	}
 	public int delete(MybatisTblVO vo) {
 		return sql.delete("", vo);
-		
-	public List<MybatisVO> select() {
+	}
+	public List<MybatisTblVO> select(){
 		List<MybatisTblVO> list = sql.selectList("");
 		return list;
 	}
-	}
-	
 }

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 	//1.url을 통해 파라메터를 입력받아 4가지 동작이 전부 잘 되는지 테스트
-	//2.jsp페이지에 폼태그나 a태그 등을 이용하여 4가지 동작이 잘 되는지 테스트(입력한 값 기준)
+	//2.jsp페이지에 폼태그나 a태그 등을 이용하여 4가지 동작이 잘 되는지 테스트(입력한 값 기준으로)
 
 
 @WebServlet("/MybatisTblController")
