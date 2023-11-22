@@ -44,11 +44,11 @@
 	</c:forEach>
 	</table>
 	
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		function test() {
 			
 		}
 		
-	</script>
+	</script> -->
 </body>
 </html>
