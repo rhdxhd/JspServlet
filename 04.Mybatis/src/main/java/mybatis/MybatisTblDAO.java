@@ -22,7 +22,7 @@ public class MybatisTblDAO {
 		try {
 			inputStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-			SqlSession sql = sqlSessionFactory.openSession(true); 
+			sql = sqlSessionFactory.openSession(true); 
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -31,17 +31,17 @@ public class MybatisTblDAO {
 	
 	
 	public int insert(MybatisTblVO vo) {
-		int result = sql.insert("", vo);
+		int result = sql.insert("mytbl.insert", vo);
 		return result;
 	}
 	public int update(MybatisTblVO vo) {
-		return sql.update("", vo);
+		return sql.update("mytbl.update", vo);
 	}
 	public int delete(MybatisTblVO vo) {
-		return sql.delete("", vo);
+		return sql.delete("mytbl.delete", vo);
 	}
 	public List<MybatisTblVO> select(){
-		List<MybatisTblVO> list = sql.selectList("");
+		List<MybatisTblVO> list = sql.selectList("mytbl.select");
 		return list;
 	}
 }
