@@ -1,7 +1,7 @@
 package mybatis;
 
 public class MybatisTblVO {
-	private String col1, col2, col3;
+	private String col1 , col2 , col3;
 
 	public String getCol1() {
 		return col1;
@@ -27,5 +27,5 @@ public class MybatisTblVO {
 		this.col3 = col3;
 	}
 	
-
+	
 }

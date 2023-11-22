@@ -7,19 +7,16 @@ import mybatis.MybatisTblVO;
 
 class MybatisTblDAOTest {
 
-@Test
-public void insert() {
-	
-	MybatisTblVO vo = new MybatisTblVO();
-	vo.setCol1("a");
-	vo.setCol1("a");
-	vo.setCol1("a");
-	
-	
-	
-	MybatisTblDAO dao = new MybatisTblDAO();
-	dao.insert(vo)
-	
-}
-
+	@Test
+	public void insert() {
+		//==================
+		MybatisTblVO vo = new MybatisTblVO();
+		vo.setCol1("a");//req.getParam..
+		vo.setCol2("b");
+		vo.setCol3("c");
+		//==================컨트롤러에서도 같은 동작이 필요함.
+		
+		MybatisTblDAO dao = new MybatisTblDAO();
+		System.out.println(dao.insert(vo));
+	}
 }

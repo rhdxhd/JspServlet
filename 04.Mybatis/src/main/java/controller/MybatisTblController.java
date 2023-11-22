@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,16 +19,19 @@ import mybatis.MybatisTblVO;
 
 @WebServlet("*.mytbl")
 public class MybatisTblController extends HttpServlet {
-	RequestDispatcher rd;
+	//1.url을 통해 파라메터를 입력받아 4가지 동작이 전부 잘 되는지 테스트
+	//2.jsp페이지에 폼태그나 a태그 등을 이용하여 4가지 동작이 잘 되는지 테스트(입력한 값 기준으로)
+		
+	
+	
 
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Servlet 화면");
+		
 		String path = req.getServletPath();
 		MybatisTblDAO dao = new MybatisTblDAO();
-		
-	
+			
 		if(path.equals("/insert.mytbl")) {  //CREATE
 			//1.DAO호출
 			//2.페이지 요청(URL 요청)
@@ -37,10 +41,10 @@ public class MybatisTblController extends HttpServlet {
 			vo.setCol3(req.getParameter("col3"));
 			
 			System.out.println(dao.insert(vo));
+			resp.sendRedirect("select.mytbl");
 			
-			
-			rd = req.getRequestDispatcher("mybatis/insert.jsp");
-			System.out.println(req.getParameter("col1")+req.getParameter("col2")+req.getParameter("col3"));
+//			rd = req.getRequestDispatcher("mybatis/insert.jsp");
+//			System.out.println(req.getParameter("col1")+req.getParameter("col2")+req.getParameter("col3"));
 			
 
 		}else if(path.equals("/update.mytbl")) { //U
@@ -69,10 +73,10 @@ public class MybatisTblController extends HttpServlet {
 			
 			
 		}else if(path.equals("/select.mytbl")) { //READ
+			RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+			List<MybatisTblVO> list = dao.select();
 			
-			req.setAttribute("list", dao.select());
-			
-			rd = req.getRequestDispatcher("index.jsp");
+			req.setAttribute("list", list);
 			rd.forward(req, resp);
 			
 		}
