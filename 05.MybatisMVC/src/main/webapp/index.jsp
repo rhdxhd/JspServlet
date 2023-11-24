@@ -60,7 +60,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<a class="portfolio-box"
 						href="https://www.youtube.com/embed/TumVzGurFRo?si=Q4fxQBKLw01QEJYK"
-						title="Project Name"> <img class="img-fluid"
+						title="Project Name"> <img class="img-fluid w-100"
 						src="https://img.youtube.com/vi/TumVzGurFRo/0.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
@@ -71,7 +71,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<a class="portfolio-box"
 						href="https://www.youtube.com/embed/U06_bNL8Des?si=5h2s1oWHLUv5mfno"
-						title="Project Name"> <img class="img-fluid"
+						title="Project Name"> <img class="img-fluid w-100"
 						src="https://img.youtube.com/vi/U06_bNL8Des/0.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
@@ -82,7 +82,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<a class="portfolio-box"
 						href="https://www.youtube.com/embed/8BcpSw3CSOs?si=_Bso8lnQWSa9zNmD"
-						title="Project Name"> <img class="img-fluid"
+						title="Project Name"> <img class="img-fluid w-100"
 						src="https://img.youtube.com/vi/8BcpSw3CSOs/0.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
@@ -93,7 +93,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<a class="portfolio-box"
 						href="https://www.youtube.com/embed/g_KgJI836wc?si=vn7aPGyXeYxxauTo"
-						title="Project Name"> <img class="img-fluid"
+						title="Project Name"> <img class="img-fluid w-100"
 						src="https://img.youtube.com/vi/g_KgJI836wc/0.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
@@ -104,7 +104,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<a class="portfolio-box"
 						href="https://www.youtube.com/embed/QYGJ-Zcma4Q?si=mahfqhi6UBq0hLDY"
-						title="Project Name"> <img class="img-fluid"
+						title="Project Name"> <img class="img-fluid w-100"
 						src="https://img.youtube.com/vi/QYGJ-Zcma4Q/0.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
@@ -115,7 +115,7 @@
 				<div class="col-lg-4 col-sm-6">
 					<a class="portfolio-box"
 						href="https://www.youtube.com/embed/VF0LQVx4rA0?si=qmmUpWoMgZBC7tr1"
-						title="Project Name"> <img class="img-fluid"
+						title="Project Name"> <img class="img-fluid w-100"
 						src="https://img.youtube.com/vi/VF0LQVx4rA0/0.jpg" alt="..." />
 						<div class="portfolio-box-caption p-3">
 							<div class="project-category text-white-50">Category</div>
