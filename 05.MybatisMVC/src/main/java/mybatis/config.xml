@@ -15,7 +15,7 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="mappers/test-mapper.xml"/>    
+    <mapper resource="mappers/cus-mapper.xml"/>    
   </mappers>
 
 </configuration>
