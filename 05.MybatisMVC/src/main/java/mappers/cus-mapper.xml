@@ -30,8 +30,4 @@
 		WHERE CUSTOMER_ID = #{customer_id}
 	</update>
 
-
-
-
-
 </mapper>
