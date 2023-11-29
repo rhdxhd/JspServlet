@@ -1,5 +1,6 @@
 package hr;
 
+import java.util.HashMap;
 import java.util.List;
 
 import common.MybatisConnection;
@@ -12,8 +13,8 @@ public class HrDAO extends MybatisConnection{
 	}
 
 	
-	public List<HrVO> select() {
-		return sql.selectList("hr.select");
+	public List<HrVO> select(HashMap<String, String> map) {
+		return sql.selectList("hr.select", map);
 	}
 	
 	
