@@ -3,6 +3,7 @@ package customer;
 public class CustomerVO {
 	private int customer_id;
 	private String name, gender, email, phone;
+	
 	public int getCustomer_id() {
 		return customer_id;
 	}

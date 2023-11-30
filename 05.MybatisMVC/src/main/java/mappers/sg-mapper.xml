@@ -5,10 +5,20 @@
 <mapper namespace="sg">
 
 	<select id="select" resultType="sg.SgVO">
-		
-		
-		 select EMPLOYEE_ID, FIRST_NAME, HIRE_DATE, SALARY from EMPLOYEES;
-		
-		
+		 select EMPLOYEE_ID, FIRST_NAME, HIRE_DATE, SALARY from EMPLOYEES
 	</select>
+	
+	
+	<delete id="delete">
+		delete from employees where employee_id = #{employee_id}
+		
+	</delete>
+	
+	
+	<update id="update">
+	UPDATE employees
+		SET first_name=#{first_name}, hire_date=#{hire_date}, salary=#{salary}
+		WHERE CUSTOMER_ID = #{customer_id}
+	
+	</update>
 </mapper>

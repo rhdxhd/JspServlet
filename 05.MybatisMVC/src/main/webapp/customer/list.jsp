@@ -11,9 +11,7 @@
 	
 	
 	<button type="button" class="btn btn-dark align-middle" id="insertModalBtn">신규 추가</button>
-	
-	
-	
+		
 		<table class="table table-striped">
 			<thead>
 				<tr>
@@ -23,24 +21,21 @@
 					<th scope="col">이메일</th>
 					<th scope="col">연락처</th>
 					<th scope="col">수정</th>
-					<th scope="col">삭제</th>
-					
+					<th scope="col">삭제</th>	
 				</tr>
 			</thead>
 			<tbody>
-
+			
 				<!-- c:if, c:choose ..
 			when: test = 조건1
 			when: test = 조건2
 			otherwise: = else
-			
-			empty: 리스트가 비어있거나 null인지
-			
-			 -->
+
+			empty: 리스트가 비어있거나 null인지 -->
 				<c:choose>
 					<c:when test="${empty list}">
 						<tr>
-							<td colspan="6" class="text-center">데이터가 없습니다.</td>
+							<td colspan="7" class="text-center">데이터가 없습니다.</td>
 						</tr>
 
 					</c:when>
@@ -71,7 +66,7 @@
 
 
 
-<!-- Modal -->
+<!-- insert Modal -->
 <div class="modal fade" id="insertModal" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -163,28 +158,19 @@
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="여">
   <label class="form-check-label" for="inlineRadio2">여</label>
-</div>
-  
-  
-
-
-      
-      
+</div>    
         
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
         <input type="submit" class="btn btn-primary" value="수정"/>
       </div>
-      
-      
+         
       </form>
-      
-      
+        
     </div>
   </div>
 </div>
-
 
 
 
@@ -203,12 +189,14 @@
 		$('#updateModal input[name=phone]').val(phone);
 		$('#updateModal input[name=gender][value=' + gender + ']').click();
 		$('#updateModal').modal('show');
-
 	}
 	
 	
 	
 
+	
+	
+	
 
 	function deleteCus(customer_id) {
 		if(confirm('정말 삭제 하시겠습니까?')) {
@@ -216,6 +204,15 @@
 			location.href='delete.cu?customer_id=' + customer_id;
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	$('#insertModalBtn').on("click", function () {
 		// $('#insertModal').toggle();

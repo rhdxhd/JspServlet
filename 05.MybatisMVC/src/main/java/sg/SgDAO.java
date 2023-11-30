@@ -13,9 +13,22 @@ public class SgDAO extends MybatisConnection{
 	
 	
 	
-	public List<SgVO> select(HashMap<String, String>map) {
-		return sql.selectList("sg.select", map);
+	public List<SgVO> select() {
+		return sql.selectList("sg.select");
 	}
 	
 
+	public void delete(int employee_id) {
+		System.out.println(sql.delete("sg.delete", employee_id));
+		
+	}
+	
+	
+	
+	public void update(SgVO vo) {
+		sql.insert("sg.update", vo);
+	}
+	
+	
+	
 }
