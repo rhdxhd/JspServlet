@@ -5,7 +5,7 @@
 <mapper namespace="sg">
 
 	<select id="select" resultType="sg.SgVO">
-		 select EMPLOYEE_ID, FIRST_NAME, HIRE_DATE, SALARY from EMPLOYEES
+		 select EMPLOYEE_ID, last_NAME,  to_char(HIRE_DATE, 'yyyy-mm-dd') hire_date, SALARY, email from EMPLOYEES
 	</select>
 	
 	
@@ -15,10 +15,19 @@
 	</delete>
 	
 	
+	<insert id="insert">
+		INSERT INTO employees (employee_id, last_name, hire_date, salary, email)
+		VALUES(SEQ_EMP_1.nextval, #{last_name}, #{hire_date}, #{salary}, #{email})
+	</insert>
+	
+	
 	<update id="update">
 	UPDATE employees
-		SET first_name=#{first_name}, hire_date=#{hire_date}, salary=#{salary}
-		WHERE CUSTOMER_ID = #{customer_id}
+		SET last_name=#{last_name}, hire_date=#{hire_date}, salary=#{salary}, email=#{email}
+		WHERE employee_ID = #{employee_id}
 	
 	</update>
+	
+	
+	
 </mapper>

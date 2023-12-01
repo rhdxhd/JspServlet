@@ -25,9 +25,19 @@ public class SgDAO extends MybatisConnection{
 	
 	
 	
-	public void update(SgVO vo) {
-		sql.insert("sg.update", vo);
+	public void insert(SgVO vo) {
+		sql.insert("sg.insert", vo);
 	}
+	
+	
+	public void update(SgVO vo) {
+		sql.update("sg.update", vo);
+	}
+	
+	
+	
+
+	
 	
 	
 	

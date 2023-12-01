@@ -35,14 +35,32 @@ public class SgController extends HttpServlet {
 			resp.sendRedirect("list.sg");
 			
 			
+			
+		}else if(path.equals("/insert.sg")) {
+			SgVO vo = new SgVO();
+			vo.setLast_name(req.getParameter("last_name"));
+			vo.setHire_date(req.getParameter("hire_date"));
+			vo.setSalary(Integer.parseInt(req.getParameter("salary")));
+			vo.setEmail(req.getParameter("email"));
+			dao.insert(vo);
+			resp.sendRedirect("list.sg");	
+			
+			
 		}else if(path.equals("/update.sg"))	{
 			SgVO vo = new SgVO();
 			vo.setEmployee_id(Integer.parseInt(req.getParameter("employee_id")));
-			vo.setFirst_name("first_name");
-			vo.setHire_date("hire_date");
+			vo.setLast_name(req.getParameter("last_name"));
+			vo.setHire_date(req.getParameter("hire_date"));
+			//System.out.println(req.getParameter("hire_date"));
+			
 			vo.setSalary(Integer.parseInt(req.getParameter("salary")));
+			vo.setEmail(req.getParameter("email"));
 			dao.update(vo);
 			resp.sendRedirect("list.sg");
+			
+			
+	
+			
 			
 		}
 	}

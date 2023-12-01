@@ -19,9 +19,10 @@
 				<tr>
 					<th scope="col">순번</th>
 					<th scope="col">직원번호</th>
-					<th scope="col">이름</th>
+					<th scope="col">성</th>
 					<th scope="col">입사일</th>
 					<th scope="col">연봉</th>
+					<th scope="col">이메일</th>					
 					<th scope="col">수정</th>
 					<th scope="col">삭제</th>
 				
@@ -44,9 +45,10 @@
 							<tr>
 								<th scope="row">${i.index+1}</th>
 								<td>${vo.employee_id }</td>
-								<td>${vo.first_name }</td>
+								<td>${vo.last_name }</td>
 								<td>${vo.hire_date }</td>
 								<td>${vo.salary }</td>
+								<td>${vo.email }</td>
 								<td><a onclick="updateSg(${i.index+1},${vo.employee_id});" class="btn btn-secondary">수정</a></td>
 								<td><a onclick="deleteSg(${vo.employee_id});" class="btn btn-danger">삭제</a></td>
 							</tr>
@@ -74,32 +76,32 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       
-      <form action = "insert.cu" mehtod="get">
+      <form action = "insert.sg" mehtod="get">
       <div class="modal-body">
+
       
   <div class="form-group">
-    <label for="name">이름</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="이름 입력">
+    <label for="last_name">성</label>
+    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="first_name">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">email</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="email">
+    <label for="hire_date">hire_date</label>
+    <input type="date" class="form-control" id="hire_date" name="hire_date" placeholder="hire_date">
   </div>
   
     <div class="form-group">
-    <label for="phone">PHONE</label>
-    <input type="tel" class="form-control" id="phone" name="phone" placeholder="phone">
+    <label for="salary">salary</label>
+    <input type="number" class="form-control" id="salary" name="salary" placeholder="salary">
   </div>
   
-  <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="남">
-  <label class="form-check-label" for="inlineRadio1">남</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="여">
-  <label class="form-check-label" for="inlineRadio2">여</label>
-</div>
+      <div class="form-group">
+    <label for="email">email</label>
+    <input type="text" class="form-control" id="email" name="email" placeholder="email">
+  </div>
   
+  
+  
+
   
 
 
@@ -136,22 +138,26 @@
       <input type="hidden" name="employee_id">
       <div class="modal-body">
       
+      
   <div class="form-group">
-    <label for="first_name">first_name</label>
-    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="이름">
+    <label for="last_name">last_name</label>
+    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="이름">
   </div>
   <div class="form-group">
     <label for="hire_date">hire_date</label>
-    <input type="text" class="form-control" id="hire_date" name="hire_date" placeholder="입사일">
+    <input type="date" class="form-control" id="hire_date" name="hire_date" placeholder="입사일">
   </div>
   
     <div class="form-group">
     <label for="salary">salary</label>
-    <input type="text" class="form-control" id="salary" name="salary" placeholder="연봉">
+    <input type="number" class="form-control" id="salary" name="salary" placeholder="연봉">
   </div>
   
   
-  
+        <div class="form-group">
+    <label for="email">email</label>
+    <input type="text" class="form-control" id="email" name="email" placeholder="salary">
+  </div>
 
 
       
@@ -179,14 +185,16 @@
 	function updateSg(idx, employee_id) {
 		console.log(idx + " : " + employee_id);
 		var employee_id = $('table tr:eq('+ idx+') td:eq(0)').text();
-		var first_name = $('table tr:eq('+ idx+') td:eq(1)').text();
+		var last_name = $('table tr:eq('+ idx+') td:eq(1)').text();
 		var hire_date = $('table tr:eq('+ idx+') td:eq(2)').text();
 		var salary = $('table tr:eq('+ idx+') td:eq(3)').text();
-		console.log(employee_id + " " + first_name + " " + hire_date + " " + salary);
+		var email = $('table tr:eq('+ idx+') td:eq(4)').text();
+	
 		$('#updateModal input[name=employee_id]').val(employee_id);
-		$('#updateModal input[name=first_name]').val(first_name);
+		$('#updateModal input[name=last_name]').val(last_name);
 		$('#updateModal input[name=hire_date]').val(hire_date);
 		$('#updateModal input[name=salary]').val(salary);
+		$('#updateModal input[name=email]').val(email);
 		$('#updateModal').modal('show');
 
 	}
