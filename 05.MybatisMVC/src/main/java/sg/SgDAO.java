@@ -32,13 +32,5 @@ public class SgDAO extends MybatisConnection{
 	
 	public void update(SgVO vo) {
 		sql.update("sg.update", vo);
-	}
-	
-	
-	
-
-	
-	
-	
-	
+	}	
 }
