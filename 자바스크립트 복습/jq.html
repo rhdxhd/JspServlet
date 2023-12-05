@@ -48,6 +48,40 @@
             //2.접근후값 가지고오기
             //3.제어문을 이용한 제어
 
+        
+            var name = $('#name');
+            var id = $('#id');
+
+            if( name.val().length<4) {
+                name.addClass('disable')
+                name.removeClass('available')
+            }else {
+                name.addClass('available')
+                name.removeClass('disable')
+            }
+
+
+            if ( id.val().length<4) {
+                id.addClass('disable')
+                id.removeClass('available')
+            }else{
+                id.addClass('available')
+                id.removeClass('disable')
+            }
+
+
+            if( name.val().length>=4 && id.val().length>=4 ) {
+                alert("회원가입 가능")
+            }
+
+
+
+
+
+
+
+
+
 
             //$('#name');
 
