@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
    <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,7 +21,6 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     </head>
    <body id="page-top">
-
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -35,20 +34,33 @@
                         <li class="nav-item"><a class="nav-link" href="list.hr">HR조회</a></li>
                         <li class="nav-item"><a class="nav-link" href="list.jstl">JSTL연습</a></li>
                         <li class="nav-item"><a class="nav-link" href="list.sg">혼자 해보기</a></li>
-                        <li class="nav-item"><a class="nav-info m-3" href="loginpage.me">로그인</a></li>
-                        <li class="nav-item"><a class="nav-info" href="joinpage.me">회원가입</a></li>
                     </ul>
+                    
+                    
+                    <c:if test="${empty logininfo }">
+	                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
+	                    	<li class="nav-item"><a class="nav-info m-3" href="loginpage.me">로그인</a></li>
+	                        <li class="nav-item"><a class="nav-info" href="joinpage.me">회원가입</a></li>
+	                     </ul>
+                     </c:if>
+                     <c:if test="${not empty logininfo}">
+                 	   <ul class="navbar-nav ms-auto my-2 my-lg-0">
+	                    	<li class="nav-item"><span class="nav-link">${logininfo.name}님 환영합니다.</span>
+	                    	 <a class="nav-info m-3" href="logout.me">로그아웃</a>
+	                    	 </li>
+	                     </ul>
+                     </c:if>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead position-realtive">
-        
-        <div class="w-100 h-100 bg-black"  
-        style="position: absolute; top: 0px; left: 0px; z-index: -2;"
+        <header class="masthead position-relative">
+         
+          <div class="w-100 h-100 bg-black"
+        style="position: absolute; top: 0px; left: 0px;  z-index: -2;"
         ></div>
         
-                <video class="w-100 h-100" src="assets/img/visual.mp4" autoplay muted loop 
+           <video class="w-100 h-100" src="assets/img/visual.mp4" autoplay muted loop 
         style="position: absolute; top: 0px; left: 0px; opacity: 0.3; object-fit: cover; z-index: -1;"
         ></video>
         

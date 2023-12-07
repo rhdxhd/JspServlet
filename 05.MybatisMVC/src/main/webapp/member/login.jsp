@@ -4,8 +4,6 @@
 <!DOCTYPE html>
 <html>
 <%@ include file="/include/header.jsp"%>
-
-
 <!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
   <style>
@@ -72,74 +70,81 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
             <form method="post">
-            
-              
-
-              <!-- id input -->
+           
               <div class="form-outline mb-4">
-                <input type="text" id="user_id" name="user_id" class="form-control" placeholder="아이디입력" />
+                <input type="text" id="user_id" name="user_id" class="form-control" placeholder="아이디 입력" />
                 <label class="form-label" for="user_id">아이디</label>
               </div>
 
-              <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="user_pw" name="user_pw" class="form-control" placeholder="비밀번호입력" />
+                <input type="password" id="user_pw" name="user_pw" class="form-control" placeholder="비밀번호 입력"
+                	onkeypress=" if( event.keyCode==13 ) login() "
+                  />
                 <label class="form-label" for="user_pw">패스워드</label>
               </div>
 
-          
-
-              <!-- Submit button -->
+           
               <a class="btn btn-primary btn-block mb-4" onclick="login();">
                 로그인
               </a>
 
-             
-            </form>
+             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Section: Design Block -->
 
 <script type="text/javascript">
-	function login(){
-		if( $('#user_id').val() == '' ){
+	function login() {
+		if( $('#user_id').val() == ''){
 			alert('아이디를 입력하세요.');
-			$('#user_id').focus(); //커서
+			$('#user_id').focus();//커서
 			return;
-		}else if( $('#user_pw').val() ==''){
+		}else if( $('#user_pw').val() == ''){
 			alert('비밀번호를 입력하세요.');
 			$('#user_pw').focus();//커서
 			return;
 		}
 		//페이지를 새로 요청x -> Controller나 다른 API에 데이터만 따로 요청을 하는 형태 -> 비동기 통신
-		//XMLHttpRequest객체, Http객체 : 코드가 조금 복잡함.
+		//XMLHttpRequest객체 , Http객체 : 코드가 조금 복잡함.
 		//Jquery: Ajax
-		//type: method
-		//url: 어디에 요청할껀지
-		//data: 어떤것을 전송할껀지
-		//success: 실행되는 펑션
-		//error: 실행되는 펑션
-
+		//type: json..
+		//method:post
+		//url:어디에 요청할껀지.
+		//data:어떤것을 전송할껀지.
+		//success:실행되는 펑션
+		//error:실행되는 펑션
+		
 		$.ajax({
-			type: 'post' , 
+			method:'post',
 			url: 'login.me',
-			data: { user_id:$('#user_id').val(), user_pw:$('#user_pw').val() },
-			sucess: function(response){
-				console.log(response);
-				
+			data: { user_id:$('#user_id').val()  , user_pw:$('#user_pw').val()  },
+			success: function ( res ) {
+				if(res == '1'){
+					//1.reload(x) , 로그인 페이지가 다시 나옴. -> session에 정보가 있다면 홈
+					//2.href = '/mvc'
+					//3.href = 'c:url value="/"'
+					//    / <- 루트임
+					location.href='/mvc';
+				}else{
+					alert('로그인 실패 ');
+					$('#user_id').focus();
+				}
 			},
-			erro: function(req, text){
-				alert(req.status + '오류! 다시 로그인 시도를 해주세요.');
+			error: function (req , text) {		
+				alert(req.status + ' 오류! 다시 로그인 시도를 해주세요.');
 			}
 		});
 		
+			
+			
+		
+		
 	}
-</script>
 
+</script>
 
 <%@ include file="/include/footer.jsp"%>
 </html>
