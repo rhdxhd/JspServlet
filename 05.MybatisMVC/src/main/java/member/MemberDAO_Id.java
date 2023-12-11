@@ -15,7 +15,14 @@ public class MemberDAO_Id extends MybatisConnection implements MemberService{
 
 	@Override
 	public int member_idCheck(String user_id) {
-		return sql.selectOne("me.idcheck", user_id);
+		String result = sql.selectOne("me.idcheck", user_id);
+		
+		if(result == "") {
+			return 0;
+		}else {
+			return 1;
+		}
+		
 	}
 
 	@Override

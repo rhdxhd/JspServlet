@@ -69,12 +69,14 @@ public class MemberController extends HttpServlet {
 			// /[^a-z0-9]/g; 
 			
 			service = new MemberDAO_Id();
-			service.member_idCheck(req.getParameter("user_id"));
+			//service.member_idCheck(req.getParameter("user_id"));
 			//sql매퍼를 이용해서 이미 있는 아이디라면 1 , 없는 아이디는 0을 콘솔창에 출력(syso)
 			//javascript가 받을수있게 응답처리
 			//javascript 콘솔에 1또는0을 출력
+			System.out.println(service.member_idCheck(req.getParameter("user_id")));
+			resp.getWriter().print(service.member_idCheck(req.getParameter("user_id")));
 			
-			System.out.println();		
+			
 		}						
 	}
 }

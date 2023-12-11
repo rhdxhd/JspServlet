@@ -145,6 +145,12 @@
 			data: {user_id:user_id},
 			success: function (res) {
 				//성공했을때처리!
+				if(res==0){
+					$('#user_id').addClass('checked')
+					alert('아이디 사용가능');
+					
+				}else{
+					alert('아이디 중복')}
 				
 			}, error:function(req){
 				console.log(req.status);
