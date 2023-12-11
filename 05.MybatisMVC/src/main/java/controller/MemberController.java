@@ -74,10 +74,7 @@ public class MemberController extends HttpServlet {
 			//javascript가 받을수있게 응답처리
 			//javascript 콘솔에 1또는0을 출력
 			
-			System.out.println();
-			
-		}
-			
-			
+			System.out.println();		
+		}						
 	}
 }
