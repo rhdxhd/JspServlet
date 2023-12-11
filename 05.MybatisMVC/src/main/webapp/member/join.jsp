@@ -35,15 +35,6 @@
               </div>
 
 
-
-
-
-
-
-
-
-
-
               <div class="row mb-4 pb-2 pb-md-0 mb-md-3">
                 <div class="col-md-6">
                   <div class="form-outline">
