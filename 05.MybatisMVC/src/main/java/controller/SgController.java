@@ -59,7 +59,7 @@ public class SgController extends HttpServlet {
 			resp.sendRedirect("list.sg");
 			
 			
-	
+	 
 			
 			
 		}

@@ -2,32 +2,25 @@ package member;
 
 import common.MybatisConnection;
 
-public class MemberDAO_Id extends MybatisConnection implements MemberService{
+public class MemberDAO extends MybatisConnection implements MemberService{
 
-	public MemberDAO_Id() {
+	public MemberDAO() {
 		super(DataResource.HANUL);
 	}
 
 	@Override
 	public int member_join(MemberVO vo) {
-		return 0;
+		return sql.insert("me.join" , vo);
 	}
 
 	@Override
 	public int member_idCheck(String user_id) {
-		String check = sql.selectOne("me.idcheck", user_id);
-		
-		if(check == null) {
-			return 0;
-		}else {
-			return 1;
-		}
-		
+		return 0;
 	}
 
 	@Override
 	public MemberVO member_login(MemberVO vo) {
-		return null;
+		return sql.selectOne("me.login" , vo);
 	}
 	
 	@Override
